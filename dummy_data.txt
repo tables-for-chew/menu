@@ -1,0 +1,319 @@
+mysql> select * from lunch
++-----+-----------------------+----------------------------------------------------------------------+-------+
+| id  | name                  | description                                                          | price |
++-----+-----------------------+----------------------------------------------------------------------+-------+
+|   1 | portabella mushrooms  | A light yoghurt made with saffron and fresh kiwi fruit               |    11 |
+|   2 | peas                  | A crunchy salad featuring pepperoni and dried parsley                |     9 |
+|   3 | sazon                 | A crunchy salad featuring fresh chickpea and baby courgette          |    16 |
+|   4 | tomatoes              | Fresh redcurrant and horseradish served on a bed of lettuce          |    22 |
+|   5 | cookies               | A crunchy salad featuring fresh juniper berry and cashew             |    11 |
+|   6 | artificial sweetener  | Fresh damson and jasmine served on a bed of lettuce                  |    23 |
+|   7 | bean sprouts          | Cornmeal and peppermint served on a bed of lettuce                   |    18 |
+|   8 | garlic powder         | A crisp salad featuring peanut and halibut                           |    11 |
+|   9 | cantaloupes           | Gochu jang and piccalilli served on a bed of lettuce                 |    13 |
+|  10 | chives                | Fresh beetroot and ruby grapefruit served on a bed of lettuce        |     9 |
+|  11 | croutons              | A crisp salad featuring toenjang and irish whiskey                   |    21 |
+|  12 | cream of tartar       | A crisp salad featuring button mushroom and fresh jalape             |    13 |
+|  13 | chestnuts             | Bean and prosciutto served on a bed of lettuce                       |    17 |
+|  14 | grits                 | A crunchy salad featuring fresh chamomile and venison                |    10 |
+|  15 | sauerkraut            | Lea bacon and flaxseed oil served on a bed of lettuce                |    11 |
+|  16 | parsnips              | Pork sausage meat and tuna served on a bed of lettuce                |    19 |
+|  17 | lemon juice           | A crunchy salad featuring tumeric and buckwheat                      |    18 |
+|  18 | heavy cream           | A crunchy salad featuring fresh chilli and mascarpone                |    13 |
+|  19 | chai                  | Marinaded tofu and italian dressing served on a bed of lettuce       |    20 |
+|  20 | ale                   | Tripe and cider vinegar served on a bed of lettuce                   |    22 |
+|  21 | baguette              | Sharon fruit and fresh cherimoya served on a bed of lettuce          |    19 |
+|  22 | condensed milk        | A crunchy salad featuring cumin seeds and smoked salmon              |    12 |
+|  23 | flour                 | Kalonji and sweet dessert wine served on a bed of lettuce            |    22 |
+|  24 | brussels sprouts      | Black mustard seeds and red cabbage served on a bed of lettuce       |    12 |
+|  25 | veal                  | A crisp salad featuring fresh potato and chervil                     |    10 |
+|  26 | kumquats              | A crunchy salad featuring swordfish and fried paneer                 |    19 |
+|  27 | lettuce               | A crunchy salad featuring Spanish chorizo and ostrich                |    10 |
+|  28 | lentils               | Pecan and baby onion served on a bed of lettuce                      |    21 |
+|  29 | cauliflower           | A crisp salad featuring fresh longan and mandarin                    |    22 |
+|  30 | kidney beans          | A crunchy salad featuring fresh jerusalem artichoke and acorn squash |    22 |
+|  31 | turtle                | A crisp salad featuring galliano and fresh mint                      |    18 |
+|  32 | white beans           | Limpa and fresh cranberries served on a bed of lettuce               |    17 |
+|  33 | salt                  | Fresh mangetout and spring onion served on a bed of lettuce          |    16 |
+|  34 | bagels                | Fresh quinoa and adobo seasoning served on a bed of lettuce          |    22 |
+|  35 | celery                | Mizuna and rainbow trout served on a bed of lettuce                  |    10 |
+|  36 | almonds               | Socca and tiger prawns served on a bed of lettuce                    |    16 |
+|  37 | catfish               | A crisp salad featuring fresh marrow and pheasant                    |    13 |
+|  38 | ricotta cheese        | A crisp salad featuring plum sauce and vinegar                       |    10 |
+|  39 | pumpkin seeds         | A crisp salad featuring fresh cucumber and canned corned beef        |    19 |
+|  40 | chocolate             | A crunchy salad featuring fresh jujube and wensleydale               |    19 |
+|  41 | brazil nuts           | A crisp salad featuring fresh star fruit and loquat                  |    20 |
+|  42 | pecans                | A crunchy salad featuring hp sauce and fresh spaghetti squash        |    13 |
+|  43 | corn                  | Dulse and kaffir lime leaf served on a bed of lettuce                |    12 |
+|  44 | bay leaves            | A crisp salad featuring fresh ugli fruit and eel                     |    21 |
+|  45 | jicama                | Bouquet garni and gorgonzola served on a bed of lettuce              |    14 |
+|  46 | onions                | Radiatori and emu served on a bed of lettuce                         |    12 |
+|  47 | red beans             | A crisp salad featuring le roule cheese and caviar                   |    23 |
+|  48 | Tabasco sauce         | Free-range turkey and duck served on a bed of lettuce                |    17 |
+|  49 | Goji berry            | A crunchy salad featuring angelica and pork tenderloin               |    13 |
+|  50 | honeydew melons       | A crunchy salad featuring haroset and pollock                        |    25 |
+|  51 | mozzarella            | Spaghetti and edam served on a bed of lettuce                        |    23 |
+|  52 | red snapper           | Instant coffee powde and cherry tomato served on a bed of lettuce    |    19 |
+|  53 | blue cheese           | A crisp salad featuring garlic powder and pumpkin seeds              |    22 |
+|  54 | apples                | Fresh cloudberry and stilton served on a bed of lettuce              |    15 |
+|  55 | unsweetened chocolate | A crunchy salad featuring dill and fresh blackcurrant                |    17 |
+|  56 | pecans                | Fresh shallot and tamarillo served on a bed of lettuce               |    16 |
+|  57 | alfredo sauce         | A crisp salad featuring weetabix and granny smith apple              |    20 |
+|  58 | guavas                | Poussin and italian seasoning served on a bed of lettuce             |    11 |
+|  59 | black-eyed peas       | A crisp salad featuring gurnard and millet                           |    11 |
+|  60 | tortillas             | Squid and pork served on a bed of lettuce                            |    25 |
+|  61 | margarine             | A crunchy salad featuring smoked haddock and costmary                |    22 |
+|  62 | sushi                 | Phyllo and fresh water chestnut served on a bed of lettuce           |    21 |
+|  63 | bay leaves            | A crisp salad featuring rice paper and dried rosemary                |    19 |
+|  64 | capers                | Cornstarch and fresh delicata served on a bed of lettuce             |    21 |
+|  65 | rice paper            | A crisp salad featuring nasturtium and potato starch                 |    22 |
+|  66 | alligator             | Crab and fresh daikon served on a bed of lettuce                     |    25 |
+|  67 | pomegranates          | Fresh elderberry and sultana served on a bed of lettuce              |    18 |
+|  68 | Havarti cheese        | A crunchy salad featuring fresh mozzarella and currant               |    24 |
+|  69 | poppy seeds           | Savoy cabbage and thyme served on a bed of lettuce                   |    18 |
+|  70 | cheddar cheese        | A crisp salad featuring urid dal and chinese cabbage                 |    14 |
+|  71 | cactus                | A crunchy salad featuring orange flower water and vermicelli         |    16 |
+|  72 | pickles               | Fresh arugula and kelp powder served on a bed of lettuce             |    21 |
+|  73 | oatmeal               | Fresh blueberry and raspberry vinegar served on a bed of lettuce     |    19 |
+|  74 | olive oil             | Fresh rambutan and plum tomatoes served on a bed of lettuce          |    19 |
+|  75 | tonic water           | A crisp salad featuring fresh lobster and pollack                    |    18 |
+|  76 | molasses              | A crisp salad featuring jaggery and ragu                             |     9 |
+|  77 | Worcestershire sauce  | A crisp salad featuring veal and bocconcini                          |    23 |
+|  78 | shallots              | A crisp salad featuring smoked cheese and fresh yam                  |    24 |
+|  79 | garlic                | A crunchy salad featuring fresh boysenberry and skate                |    17 |
+|  80 | mesclun greens        | Grappa and bison served on a bed of lettuce                          |    12 |
+|  81 | curry powder          | A crisp salad featuring coconut milk and crunchy date                |    14 |
+|  82 | trout                 | A crunchy salad featuring shrimp and marsala                         |    11 |
+|  83 | curry leaves          | A crisp salad featuring fresh raisin and calamari                    |    11 |
+|  84 | barley sugar          | Chinese cabbage and kielbasa served on a bed of lettuce              |    25 |
+|  85 | adobo                 | Cham and roasted chestnut served on a bed of lettuce                 |    23 |
+|  86 | tuna                  | Romaine lettuce and fresh raspberry served on a bed of lettuce       |    18 |
+|  87 | bacon grease          | A crisp salad featuring fresh borlotti bean and tongue               |    15 |
+|  88 | eggs                  | Tubetti and masa harina served on a bed of lettuce                   |    19 |
+|  89 | bard                  | Fresh kale and minced lamb served on a bed of lettuce                |    24 |
+|  90 | fennel                | A crisp salad featuring kirschwasser and hazelnut                    |    11 |
+|  91 | butter                | A crisp salad featuring green cabbage and licorice                   |    19 |
+|  92 | clams                 | A crisp salad featuring dried tarragon and fresh thai basil          |    14 |
+|  93 | chile peppers         | A crunchy salad featuring pecorino and fettuccine                    |    18 |
+|  94 | red beans             | A crisp salad featuring anchovy and cialledda                        |    25 |
+|  95 | black beans           | Denjang and mussel served on a bed of lettuce                        |    11 |
+|  96 | leeks                 | A crisp salad featuring hogget and john dory                         |    10 |
+|  97 | romaine lettuce       | A crunchy salad featuring olive and tia maria                        |    19 |
+|  98 | pumpkins              | Goat cheese and wheat served on a bed of lettuce                     |    21 |
+|  99 | cocoa powder          | Chicory and shellfish served on a bed of lettuce                     |    12 |
+| 100 | tomato paste          | A crunchy salad featuring cheddar cheese and cocoa                   |    13 |
++-----+-----------------------+----------------------------------------------------------------------+-------+
+
+
+
+mysql> select * from dinner;
++-----+------------------------------------+-----------------------------------------------------------------------------------+-------+
+| id  | name                               | description                                                                       | price |
++-----+------------------------------------+-----------------------------------------------------------------------------------+-------+
+|   1 | Caprese Zucchini Noodle Salad      | Assumenda voluptatum reiciendis quis aliquam provident.                           |    19 |
+|   2 | Chipotle Chicken Grilled Cheese    | Sit est adipisci aut quia vero debitis.                                           |    24 |
+|   3 | Mediterranean Crab                 | Sequi natus velit.                                                                |     9 |
+|   4 | Chicken Fajita Casserole           | Et natus earum et sit velit.                                                      |    24 |
+|   5 | Bird's Nest Egg Salad              | Velit libero sit nihil atque.                                                     |    23 |
+|   6 | Caprese Mac and Cheese             | Voluptatibus ducimus cupiditate ut assumenda.                                     |    11 |
+|   7 | Faggots with onion gravy           | Corporis laudantium enim nulla.                                                   |    16 |
+|   8 | Low Carb Peanut Butter             | Dolorum nemo dolores dolorem facilis fuga ut.                                     |    24 |
+|   9 | Super Mom Stir Fry                 | In amet eveniet iste expedita maxime molestias cum et.                            |    24 |
+|  10 | Penne Beef                         | Iste fugiat vero doloremque itaque.                                               |    23 |
+|  11 | Flattened Chicken                  | Soluta corporis deserunt ut sit sed et asperiores facere et.                      |    13 |
+|  12 | Pork Chops Romano                  | Adipisci deleniti sit est.                                                        |    19 |
+|  13 | Grilled chicken with chilli        | Eos occaecati ut.                                                                 |    19 |
+|  14 | Coconut Pound Cake                 | Veritatis ut assumenda aut eum.                                                   |    13 |
+|  15 | Steak Sandwiches                   | Ut eligendi ut.                                                                   |    23 |
+|  16 | Chicken and Corn Chowder           | Qui est nesciunt est.                                                             |    16 |
+|  17 | Creamy Green Chile                 | Totam quidem autem voluptas enim maiores dolores laudantium.                      |    20 |
+|  18 | Healthy Chicken Burgers            | Officiis incidunt recusandae quo dolorem ipsam.                                   |    22 |
+|  19 | Grilled Pork Chops                 | Consequatur et error.                                                             |    23 |
+|  20 | Shepherd's Pie                     | Aut aut fuga recusandae odit qui.                                                 |    15 |
+|  21 | Fruit Salad                        | Qui hic laudantium laborum quia consequatur.                                      |    10 |
+|  22 | Slow-Cooker                        | Fugit recusandae cum quia nihil ratione.                                          |    21 |
+|  23 | Spinach                            | Asperiores sunt velit maxime voluptatem voluptatem quam illo.                     |    20 |
+|  24 | Pan-seared Salmon                  | Vitae voluptas eum aperiam perspiciatis soluta eveniet esse dolorem.              |    24 |
+|  25 | Snapper                            | Esse recusandae aperiam in ea nihil doloribus ut.                                 |    12 |
+|  26 | Chicken Fajita Burgers             | Eos excepturi non ipsum.                                                          |    15 |
+|  27 | Chicken Cacciatore                 | Doloribus totam tempore.                                                          |    17 |
+|  28 | Guinea fowl tagine                 | Sint dignissimos quod doloremque similique fugit iure tempora neque nulla.        |    17 |
+|  29 | Skinnified Pork                    | Blanditiis labore vel optio mollitia assumenda.                                   |    19 |
+|  30 | Salmon Sandwiches with Fries       | Quod dolor sed.                                                                   |    18 |
+|  31 | Stir-Fried Udon                    | Fuga quia aspernatur dolores aspernatur qui aut dolore.                           |    10 |
+|  32 | Instant Pot Turkey Chili           | Blanditiis aliquam maiores corrupti dolorem.                                      |    11 |
+|  33 | The TJ Hooker Pizza                | Rerum et error totam repudiandae nostrum.                                         |    15 |
+|  34 | Slow Cooker                        | Vero fugiat eum veniam.                                                           |    18 |
+|  35 | Beef Curry                         | Voluptatem quam est deleniti odio minus saepe et labore.                          |    10 |
+|  36 | Pork Tacos                         | Cum sapiente labore molestiae aut quia.                                           |    11 |
+|  37 | Roasted Summer                     | Harum dolorem recusandae magnam doloribus.                                        |    20 |
+|  38 | Grilled Watermelon Salad           | Omnis exercitationem modi est non minima repellat dolore officia voluptatem.      |    17 |
+|  39 | Mexican Chicken                    | Nihil aspernatur reiciendis delectus.                                             |    13 |
+|  40 | Coconut                            | Consequatur doloribus quo expedita laboriosam.                                    |    12 |
+|  41 | Cheesy Chicken                     | In qui culpa ducimus quae.                                                        |    17 |
+|  42 | Sweet Thai Shrimp Curry            | Et molestiae officia.                                                             |    12 |
+|  43 | Roasted Garlic Macaroni and Cheese | Vero voluptatum nisi dolor voluptas et aut libero.                                |    24 |
+|  44 | One Pot Garlic Butter Chicken      | Nemo quisquam molestiae qui similique consectetur omnis.                          |    25 |
+|  45 | Slow Cooker Chicken                | Sequi quia qui pariatur quae impedit rem dolorum omnis voluptatem.                |    13 |
+|  46 | Grilled Chicken                    | Recusandae quidem facere voluptate suscipit quasi voluptas et.                    |    20 |
+|  47 | Kale Pesto Avocado                 | Labore libero reiciendis ullam dignissimos odio id eligendi aut.                  |    11 |
+|  48 | Slow Cooker Meatball Subs          | Non quisquam iusto ut excepturi illum fugiat quod.                                |    14 |
+|  49 | Contest-Winning                    | Distinctio et corrupti modi.                                                      |    24 |
+|  50 | Chicken Salad                      | Earum libero esse.                                                                |     9 |
+|  51 | Seared Scallops                    | Est sapiente iusto nemo expedita saepe itaque maiores nemo id.                    |    23 |
+|  52 | Skirt Steak                        | Et ad voluptas id.                                                                |    20 |
+|  53 | Almond-Thyme-Crusted Mahi Mahi     | Odit quisquam minima sunt provident necessitatibus totam ut.                      |    15 |
+|  54 | Seared Short Rib                   | Similique non sunt aut suscipit modi quod.                                        |    21 |
+|  55 | Creamy Baked Risotto               | Nihil eius vero.                                                                  |    11 |
+|  56 | Creamy chicken & mango curry       | Sed molestiae illo est.                                                           |    11 |
+|  57 | Smoked Salmon                      | Quaerat quae quidem voluptatum itaque quo ea distinctio.                          |    17 |
+|  58 | Spinach Burrata                    | Dolorem at ex sapiente.                                                           |    22 |
+|  59 | Golden Beet                        | Nulla itaque assumenda.                                                           |    15 |
+|  60 | Cornmeal-Crusted Catfish           | Numquam et maiores.                                                               |    11 |
+|  61 | Minty carrot                       | Ducimus consequuntur minima.                                                      |    10 |
+|  62 | Bang-Bang Shrimp                   | Ipsam sit debitis autem soluta.                                                   |    21 |
+|  63 | Pan-Seared Cod                     | Ut qui tenetur veritatis facilis repellendus rerum.                               |    11 |
+|  64 | Slow Cooker Coq au Vin             | Et quasi excepturi quas.                                                          |    23 |
+|  65 | Calamari                           | Rem accusamus sed.                                                                |    18 |
+|  66 | Homemade Creamy                    | Consequuntur sint hic quia porro.                                                 |    25 |
+|  67 | Avocado BLT                        | Deleniti veniam illum quos labore eos amet et.                                    |    24 |
+|  68 | Oven Baked Chicken Tacos           | Deserunt molestiae et tenetur repellendus omnis sequi ea.                         |    17 |
+|  69 | Thai Peanut Chicken                | Corrupti non et dolor.                                                            |    11 |
+|  70 | Tofu Kabobs                        | Voluptatem consectetur enim.                                                      |    17 |
+|  71 | Greek pasta salad                  | Id harum et.                                                                      |    12 |
+|  72 | Tacos                              | Incidunt sint quasi omnis ea nihil nam sunt laudantium.                           |    11 |
+|  73 | Ravioli                            | Qui et nesciunt et ducimus aliquid repellendus.                                   |    11 |
+|  74 | French Toast                       | At laboriosam sunt.                                                               |    14 |
+|  75 | Coleslaw                           | Labore porro minima inventore aspernatur est voluptatem dolorem.                  |    21 |
+|  76 | Porridge                           | Nihil repudiandae suscipit aut non dolor molestiae optio explicabo repudiandae.   |    13 |
+|  77 | Fried Egg                          | Eveniet error pariatur quis fugiat velit provident sunt.                          |    16 |
+|  78 | Bratkartoffeln                     | Voluptatem et voluptatibus rem est ipsam.                                         |    17 |
+|  79 | Chicken Nuggets                    | Officia voluptatibus autem neque accusantium.                                     |    17 |
+|  80 | Mashed Potato                      | Mollitia enim voluptatum.                                                         |    19 |
+|  81 | Mashed Potato                      | Dolorem et odit velit illo quis officiis error sed veritatis.                     |    15 |
+|  82 | Wrap                               | Neque doloribus labore debitis ab excepturi placeat ut.                           |    23 |
+|  83 | Lasagne                            | Quos qui pariatur voluptatibus soluta sint ea.                                    |    25 |
+|  84 | Egg Fried Rice                     | Doloremque explicabo porro quia laudantium qui dolorem.                           |    22 |
+|  85 | Spaghetti Bolognese                | Voluptatibus repudiandae eum neque ut voluptatum nam.                             |    19 |
+|  86 | Cucumber Salad                     | Ea sint eum odit natus delectus animi.                                            |    16 |
+|  87 | Spaetzle                           | Nostrum asperiores et.                                                            |    18 |
+|  88 | Quesadilla                         | Impedit consectetur non quae.                                                     |    14 |
+|  89 | Scallops                           | Labore facere impedit veritatis labore accusantium est.                           |    21 |
+|  90 | Ravioli                            | Recusandae sint hic dolorem nisi officiis eaque dolorem occaecati.                |    11 |
+|  91 | Tiramisu                           | Iure neque aut repellendus animi aut.                                             |    18 |
+|  92 | Couscous                           | Et voluptatem voluptas tempora sint quia eveniet.                                 |    25 |
+|  93 | Antipasto                          | Rerum suscipit hic accusamus qui impedit.                                         |    18 |
+|  94 | French Toast                       | Architecto qui ipsum nemo quia iusto.                                             |    12 |
+|  95 | Ratatouille                        | Voluptatem natus magnam.                                                          |    22 |
+|  96 | Bratwurst                          | Nisi molestiae et impedit porro facilis rerum dolores.                            |    20 |
+|  97 | Chicken Nuggets                    | Facilis ut voluptas autem voluptatem aut quisquam.                                |    25 |
+|  98 | Barbecue                           | Enim modi facere a a dolor.                                                       |    10 |
+|  99 | Chicken Noodle Soup                | Iure eum error sint.                                                              |    12 |
+| 100 | Apple Pie                          | Saepe quisquam aliquid officia eveniet voluptatem impedit voluptatem repellendus. |    14 |
++-----+------------------------------------+-----------------------------------------------------------------------------------+-------+
+
+mysql> select * from dessert;
++-----+---------------------------+-------------------------------------------------------------------------------------+-------+
+| id  | name                      | description                                                                         | price |
++-----+---------------------------+-------------------------------------------------------------------------------------+-------+
+|   1 | Teacake                   | Quibusdam ut quia.                                                                  |    10 |
+|   2 | Happy Cake                | Eos voluptas perferendis neque beatae.                                              |    19 |
+|   3 | Heavy cake                | Sit ipsum suscipit libero.                                                          |    23 |
+|   4 | Herman cake               | Est asperiores nulla qui autem assumenda amet.                                      |    12 |
+|   5 | Hot milk cake             | Ullam sequi eaque quae qui iste rerum veniam neque.                                 |    22 |
+|   6 | Hummingbird cake          | Minima dolorum sed et dolorem.                                                      |    19 |
+|   7 | Kalathappam               | Et doloremque laborum ratione qui sint dolores laborum tempora eaque.               |    13 |
+|   8 | Kek Lapis Sarawak         | Enim quae ut et asperiores voluptate non eum ut.                                    |    12 |
+|   9 | Kentucky jam cake         | Et tempora quam autem illum possimus.                                               |    24 |
+|  10 | Sheet cake                | Ad omnis aut ut labore quia consequatur.                                            |    21 |
+|  11 | Simnel cake               | Asperiores et eaque iure fugit repellendus.                                         |    12 |
+|  12 | Snack cake                | Tempora ea necessitatibus ipsam dolorem.                                            |    16 |
+|  13 | Sno Balls                 | Et repellat est.                                                                    |    13 |
+|  14 | Song gao                  | Voluptatem illo sunt voluptatem maxime autem porro est quia molestiae.              |    13 |
+|  15 | Spanische Windtorte       | Hic sit voluptatem velit omnis enim.                                                |    11 |
+|  16 | Spekkoek                  | Labore ab aut est praesentium.                                                      |    14 |
+|  17 | Spice cake                | Nam hic voluptatem porro repellat.                                                  |    10 |
+|  18 | Sponge cake               | Magni eum consequuntur distinctio fugit nihil eos.                                  |    19 |
+|  19 | St. Honoré cake           | Odio porro aliquam.                                                                 |    14 |
+|  20 | Stack cake                | Et perferendis culpa veritatis quaerat est quaerat eaque perspiciatis.              |    22 |
+|  21 | Stollen                   | Sint vero qui sunt est harum consectetur dolorum ut.                                |    18 |
+|  22 | Streuselkuchen            | Tempore aliquam enim sapiente pariatur placeat cumque omnis.                        |    18 |
+|  23 | Swiss roll                | Perferendis id et necessitatibus adipisci.                                          |    14 |
+|  24 | Tahinopita                | Nihil omnis dolores.                                                                |    18 |
+|  25 | Taiyaki                   | Veniam qui eaque est dolores temporibus est accusamus.                              |    20 |
+|  26 | Tarta de Santiago         | Deserunt est quisquam nulla non esse repudiandae amet.                              |    12 |
+|  27 | Tea loaf                  | Est autem enim nihil qui quidem eos voluptas.                                       |    25 |
+|  28 | Teacake                   | Voluptas occaecati ut excepturi neque dolores.                                      |    12 |
+|  29 | Tin roof pie              | Rerum natus possimus veniam aut iusto.                                              |    19 |
+|  30 | Tipsy cake                | Quo quos impedit ut non eum ex.                                                     |    17 |
+|  31 | Tiramisu                  | Aut quas sed dolores quaerat illum accusamus est corrupti distinctio.               |    14 |
+|  32 | Brownie                   | Iste veniam ut rerum.                                                               |    14 |
+|  33 | Buccellato                | Itaque eum voluptas autem.                                                          |    21 |
+|  34 | Buckwheat gateau          | Et nobis doloribus soluta.                                                          |    22 |
+|  35 | Bulla cake                | Reprehenderit nulla et non sit asperiores ea.                                       |    11 |
+|  36 | Bundt cake                | Amet sint molestiae cupiditate porro.                                               |    19 |
+|  37 | Butter cake               | Iure suscipit repudiandae ut ea dolorum.                                            |    17 |
+|  38 | Butterkuchen              | Corporis consequatur nisi quis.                                                     |    14 |
+|  39 | Pandan cake               | Quis et deleniti incidunt qui perferendis.                                          |    15 |
+|  40 | Panforte                  | Cumque optio suscipit eveniet omnis dolor officia.                                  |    23 |
+|  41 | Panettone                 | Quam eius fuga magni sunt laudantium praesentium.                                   |    13 |
+|  42 | Panpepato                 | Sed similique et rerum molestiae culpa.                                             |     9 |
+|  43 | Parkin                    | Aut dolor quia nulla quisquam nam blanditiis et.                                    |    24 |
+|  44 | Parrozzo                  | Eum eligendi et quia sunt et ea ullam.                                              |    24 |
+|  45 | Pastiera                  | Consequuntur praesentium eum est quibusdam totam consectetur delectus.              |    19 |
+|  46 | Petit four                | Neque natus ipsam aliquid.                                                          |    14 |
+|  47 | Eccles cake               | Vel odio molestiae.                                                                 |    22 |
+|  48 | Eggies                    | Veritatis sunt optio eaque ad dolorem qui et provident.                             |    23 |
+|  49 | Eierschecke               | Sit voluptatum amet neque sunt.                                                     |    21 |
+|  50 | Erotic cake               | Quo et et repellendus veniam est quasi aut quam.                                    |    17 |
+|  51 | Wacky cake                | Quis sapiente impedit illum inventore.                                              |    25 |
+|  52 | Wafer                     | Saepe quibusdam debitis ea.                                                         |    11 |
+|  53 | Waffle                    | Quod enim itaque hic.                                                               |     9 |
+|  54 | Wedding cake              | Magni iusto explicabo.                                                              |    10 |
+|  55 | Welsh cake                | Ipsa iure voluptatem sunt placeat.                                                  |    21 |
+|  56 | White sugar sponge cake   | Aut corrupti molestiae tenetur.                                                     |    20 |
+|  57 | Wine cake                 | Facilis ex qui sed ducimus laudantium.                                              |    10 |
+|  58 | Mampostial                | Provident id itaque sunt magnam ullam excepturi.                                    |    20 |
+|  59 | Manjar                    | Voluptas est consequuntur culpa deserunt adipisci voluptatem nam.                   |    22 |
+|  60 | Maple sugar               | Modi delectus natus vel ut voluptas libero autem nulla iste.                        |    19 |
+|  61 | Maple taffy               | Consectetur sit praesentium voluptas aliquam molestiae.                             |    14 |
+|  62 | Marron glacé              | Numquam voluptas et rerum perspiciatis distinctio facere.                           |    18 |
+|  63 | Marshmallow               | Itaque corrupti commodi architecto aperiam atque possimus accusamus deserunt.       |    24 |
+|  64 | Marshmallow creme         | Id est sit aperiam inventore dignissimos quaerat deleniti.                          |    17 |
+|  65 | Marzipan                  | Repellendus sit et sapiente dolorem et voluptatem perferendis et.                   |    18 |
+|  66 | Mendiant                  | Et quo reiciendis architecto incidunt ducimus quis voluptas fugiat architecto.      |    16 |
+|  67 | Milk chocolate            | Quos mollitia eaque magni ratione ut.                                               |    10 |
+|  68 | Mint                      | Saepe quas et et laborum iure et.                                                   |    24 |
+|  69 | Misri                     | Perspiciatis ut ea soluta est.                                                      |    10 |
+|  70 | Modjeska                  | Aliquid fuga id.                                                                    |    16 |
+|  71 | Mooncake                  | Illo nulla officia animi beatae est tempora.                                        |    20 |
+|  72 | Moustalevria              | Animi ullam labore consequatur laborum error.                                       |    19 |
+|  73 | Mozartkugel               | Quod iusto omnis dolor eius quod eum in expedita iure.                              |     9 |
+|  74 | Semifreddo                | Harum voluptatem tempore dolorem ab assumenda asperiores minus voluptatem nesciunt. |    13 |
+|  75 | Shave ice                 | Et ipsam nulla aliquid possimus.                                                    |    16 |
+|  76 | Shaved ice                | Distinctio voluptas aut animi.                                                      |     9 |
+|  77 | Slush                     | Labore voluptatem voluptatem.                                                       |    17 |
+|  78 | Sno-ball                  | Repellendus inventore enim veritatis.                                               |    17 |
+|  79 | Snow cone                 | Et porro qui.                                                                       |    10 |
+|  80 | Snow cream                | Veritatis dolore laboriosam cumque eaque animi.                                     |    16 |
+|  81 | Soft serve                | Veniam repudiandae dolores sed deserunt qui eos.                                    |    21 |
+|  82 | Sorbet                    | Dicta dolor non neque et totam perspiciatis est omnis adipisci.                     |     9 |
+|  83 | Spoom                     | Rerum suscipit voluptatem fugit.                                                    |    19 |
+|  84 | Ice cream bar             | Quidem rerum maxime voluptatem iusto.                                               |    17 |
+|  85 | Ice cream cake            | Odio et quis quasi ullam consequatur numquam assumenda excepturi.                   |    25 |
+|  86 | Ice cream cone            | Possimus quo maiores sed.                                                           |    17 |
+|  87 | Ice cream float           | Quia laudantium voluptate eius sint voluptatem.                                     |    16 |
+|  88 | Ice cream sandwich        | Excepturi eos corporis laboriosam laboriosam et neque sit commodi.                  |    22 |
+|  89 | Ice cream soda            | Aut sed non quidem.                                                                 |    18 |
+|  90 | Ice milk                  | Iusto error temporibus.                                                             |    16 |
+|  91 | Indian ice cream (Alaska) | Reiciendis quia nisi eum ut laborum incidunt fuga nesciunt cumque.                  |    15 |
+|  92 | Indian ice cream (Canada) | Esse commodi est dolorem earum maxime exercitationem.                               |    19 |
+|  93 | Banitsa                   | Architecto voluptate harum.                                                         |    19 |
+|  94 | Banket                    | Animi sapiente qui commodi sunt distinctio.                                         |    12 |
+|  95 | Bear claw                 | Ut sequi in pariatur consequatur.                                                   |    17 |
+|  96 | BeaverTails               | Veritatis ut veritatis.                                                             |    14 |
+|  97 | Belekoy                   | Ipsam modi est eum libero voluptatibus voluptas doloribus et.                       |    14 |
+|  98 | Belokranjska povitica     | Veniam est nisi qui non sunt consectetur maxime.                                    |    16 |
+|  99 | Bethmännchen              | Inventore labore blanditiis.                                                        |    22 |
+| 100 | Birnbrot                  | Inventore deserunt error non quia incidunt.                                         |    23 |
++-----+---------------------------+-------------------------------------------------------------------------------------+-------+
