@@ -14,7 +14,7 @@
     "react-dev": "webpack -p --watch",
     "test": "jest",
     "start": "node server/index.js",
-    "seed": "node server/seed.js"
+    "seed": "node server/db/seed.js"
   },
   "dependencies": {
     "compression": "^1.7.3",

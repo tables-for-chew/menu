@@ -2,9 +2,9 @@ import $ from 'jquery';
 
 export default {
 
-  renderMenu: (meal, callback) => {
+  renderMenu: (meal, id, callback) => {
 
-    let tempURL = "/menu?q=" + meal;
+    let tempURL = `/api${id}menu?q=${meal}`;
     console.log('temp: ', tempURL);
 
     $.get({
