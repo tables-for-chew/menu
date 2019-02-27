@@ -1,31 +1,41 @@
 **Get Menu**
 ----
-  Gets one meal
+  Reads all meals
 
 * **URL**
 
-  /:mealId
+  /menu
 
 * **Method:**
 
   `GET` 
   
-*  **URL Params**
-
-   **Required:**
- 
-   `mealId=[integer]`
 
 * **Success Response:**
 
   * **Code:** 200 <br />
     **Content:** `
+    [
+    {
+        "id": 1,
+        "name": "mushrooms",
+        "description": "A light yoghurt made with saffron and fresh kiwi fruit",
+        "price": 12
+    },
+    {
+        "id": 2,
+        "name": "peas",
+        "description": "A crunchy salad featuring pepperoni and dried parsley",
+        "price": 17
+    },
     {
         "id": 3,
         "name": "sazon",
         "description": "A crunchy salad featuring fresh chickpea and baby courgette",
         "price": 15
-    }`
+    }
+    ]
+    `
  
 * **Error Response:**
 
@@ -40,7 +50,7 @@
 * **Sample Call:**
 
    `$.ajax({
-    url: "/:mealId",
+    url: "/menu",
     dataType: "json",
     type : "GET",
     success : (data) => {
@@ -48,10 +58,64 @@
     }
   });`
 
-* **Notes:**
 
-  <_This is where all uncertainties, commentary, discussion etc. can go. I recommend timestamping and identifying oneself when leaving comments here._> 
 
+**Get Meal**
+----
+  Reads one meal
+
+* **URL**
+
+  /menu?q=[meal]
+
+* **Method:**
+
+  `GET` 
+  
+*  **URL Params**
+
+   **Required:**
+ 
+   `meal=[string]`
+
+   Meal options: lunch, dinner, dessert
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** `
+    [
+    {
+        "id": 3,
+        "name": "sazon",
+        "description": "A crunchy salad featuring fresh chickpea and baby courgette",
+        "price": 15
+    }
+    {
+      ...
+    }
+    ]`
+ 
+* **Error Response:**
+
+  * **Code:** 404 NOT FOUND <br />
+    **Content:** `{ error : "Not Found" }`
+
+  OR
+
+  * **Code:** 422 UNPROCESSABLE ENTRY <br />
+    **Content:** `{ error : "Invalid Request" }`
+
+* **Sample Call:**
+
+   `$.ajax({
+    url: "/menu?q=[meal]",
+    dataType: "json",
+    type : "GET",
+    success : (data) => {
+      console.log(data)
+    }
+  });`
 
 
   **Title**
