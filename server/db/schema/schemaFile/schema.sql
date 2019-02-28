@@ -7,7 +7,8 @@ CREATE TABLE lunch (
     name VARCHAR(100),
     description VARCHAR(100),
     price INT,
-    PRIMARY KEY(id)
+    PRIMARY KEY(id),
+    restaurant_id INT
 );
 
 CREATE TABLE dinner (
@@ -15,7 +16,8 @@ CREATE TABLE dinner (
     name VARCHAR(100),
     description VARCHAR(100),
     price INT,
-    PRIMARY KEY(id)
+    PRIMARY KEY(id),
+    restaurant_id INT
 );
 
 CREATE TABLE dessert (
@@ -23,5 +25,6 @@ CREATE TABLE dessert (
     name VARCHAR(100),
     description VARCHAR(100),
     price INT,
-    PRIMARY KEY(id)
+    PRIMARY KEY(id),
+    restaurant_id INT
 );
