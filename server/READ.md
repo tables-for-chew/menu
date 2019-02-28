@@ -116,6 +116,7 @@
         "restaurant_id": 67
     }
     ]`
+
  
 * **Error Response:**
 
@@ -162,6 +163,16 @@
 * **Success Response:**
 
   * **Code:** 200 
+      **Content:** `
+
+    { 
+      "id": 9, 
+      "name": "butter", 
+      "description": "blakfjgldkshg;jdshgierhjg;khjf", 
+      "price": 15, 
+      "restaurant_id": 4
+      } 
+    `
  
 * **Error Response:**
 
