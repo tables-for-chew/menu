@@ -5,14 +5,33 @@ module.exports = {
   get: (req, res) => {
 
     let meal = req.query.q === undefined ? 'lunch' : req.query.q;
-    console.log(meal); // => lunch, dinner or dessert
-    console.log('params', req.params); // => restaurant id
-    res.status(200).send("you have hit the GET method within the controller!");
-    //use promises here below to call models async here...
+    let id = req.params.restaurantId; 
+
+    models.select(meal, id)
+    .then((data) => {
+      res.status(200).send(data);
+    })
+    .catch((error) => {
+      console.log(error);
+      res.satus(404)
+    });
   },
 
   post: (req, res) => {
-    res.status(200).send("you have hit the POST method within the controller!");
+    let meal = req.query.q === undefined ? 'lunch' : req.query.q;
+    let id = Number(req.params.restaurantId); 
+
+    console.log('meal', meal, typeof meal); // => lunch, dinner or dessert
+    console.log('id', id, typeof id); // => restaurant id
+
+    models.insert(meal, id, req.body)
+    .then(() => {
+      res.status(201).send('Youve hit the POST');
+    })
+    .catch((error) => {
+      console.log(error);
+      res.status(304);
+    });
   },
 
   put: (req, res) => {
