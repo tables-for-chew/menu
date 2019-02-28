@@ -24,12 +24,13 @@
   * **Code:** 200 <br />
     **Content:** `
     [
-    {
-        "id": 3,
-        "name": "sazon",
-        "description": "A crunchy salad featuring fresh chickpea and baby courgette",
-        "price": 15
-    }
+    { 
+      "id": 9, 
+      "name": "butter", 
+      "description": "betty botter loves her butter", 
+      "price": 15, 
+      "restaurant_id": 4
+    } 
     {
       ...
     }
@@ -80,6 +81,16 @@
 * **Success Response:**
 
   * **Code:** 201
+      **Content:** `
+    
+    { 
+      "id": 9, 
+      "name": "butter", 
+      "description": "betty botter loves her butter", 
+      "price": 15, 
+      "restaurant_id": 4
+    } 
+    `
  
 * **Error Response:**
 
@@ -126,6 +137,16 @@
 * **Success Response:**
 
   * **Code:** 200 
+      **Content:** `
+
+    { 
+      "id": 9, 
+      "name": "butter", 
+      "description": "blakfjgldkshg;jdshgierhjg;khjf", 
+      "price": 15, 
+      "restaurant_id": 4
+      } 
+    `
  
 * **Error Response:**
 
