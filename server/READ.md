@@ -24,7 +24,13 @@
   * **Code:** 200 <br />
     **Content:** `
     [
-    { "id": 9, "name": "butter", "description": "blakfjgldkshg;jdshgierhjg;khjf", "price": 15, "restaurant_id": 4} 
+    { 
+      "id": 9, 
+      "name": "butter", 
+      "description": "betty botter loves her butter", 
+      "price": 15, 
+      "restaurant_id": 4
+    } 
     {
       ...
     }
@@ -76,12 +82,15 @@
 
   * **Code:** 201
       **Content:** `
-    [
-    { "id": 9, "name": "butter", "description": "blakfjgldkshg;jdshgierhjg;khjf", "price": 15, "restaurant_id": 4} 
-    {
-      ...
-    }
-    ]`
+    
+    { 
+      "id": 9, 
+      "name": "butter", 
+      "description": "betty botter loves her butter", 
+      "price": 15, 
+      "restaurant_id": 4
+    } 
+    `
  
 * **Error Response:**
 
@@ -129,7 +138,14 @@
 
   * **Code:** 200 
       **Content:** `
-    { "id": 9, "name": "butter", "description": "blakfjgldkshg;jdshgierhjg;khjf", "price": 15, "restaurant_id": 4} 
+
+    { 
+      "id": 9, 
+      "name": "butter", 
+      "description": "blakfjgldkshg;jdshgierhjg;khjf", 
+      "price": 15, 
+      "restaurant_id": 4
+      } 
     `
  
 * **Error Response:**
