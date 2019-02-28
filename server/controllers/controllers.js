@@ -13,7 +13,7 @@ module.exports = {
     })
     .catch((error) => {
       console.log(error);
-      res.satus(404)
+      res.status(404)
     });
   },
 
