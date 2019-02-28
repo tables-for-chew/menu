@@ -1,6 +1,6 @@
-**Get Meal**
+**Get Menu**
 ----
-  Reads one of three meals by restuarant id 
+  Returns a menu for given restaurant id and meal. The meal can be one of three: lunch, dinner, or dessert. 
 
 * **URL**
 
@@ -29,9 +29,21 @@
         "name": "sazon",
         "description": "A crunchy salad featuring fresh chickpea and baby courgette",
         "price": 15
-    }
+        "restaurant_id": 67
+    },
     {
-      ...
+        "id": 4,
+        "name": "sazon",
+        "description": "A crunchy salad featuring fresh chickpea and baby courgette",
+        "price": 15,
+        "restaurant_id": 67
+    },
+    {
+        "id": 5,
+        "name": "sazon",
+        "description": "A crunchy salad featuring fresh chickpea and baby courgette",
+        "price": 15
+        "restaurant_id": 67
     }
     ]`
  
@@ -56,9 +68,9 @@
     }
   });`
 
-**Add a Meal**
+**Add a Menu**
 ----
-  Updates one of three meals by restaurant id 
+  Updates a menu with a given restaurant id and type of meal
 
 * **URL**
 
@@ -80,6 +92,30 @@
 * **Success Response:**
 
   * **Code:** 201
+      **Content:** `
+    [
+    {
+        "id": 1,
+        "name": "cherry pie",
+        "description": "yum yum yum made from fresh cherries for your local orchard",
+        "price": 15
+        "restaurant_id": 67
+    },
+    {
+        "id": 2,
+        "name": "peach cobbler",
+        "description": "Made form local peaches",
+        "price": 15,
+        "restaurant_id": 67
+    },
+    {
+        "id": 3,
+        "name": "chocolate mousse",
+        "description": "creamy deliciousness",
+        "price": 15
+        "restaurant_id": 67
+    }
+    ]`
  
 * **Error Response:**
 
@@ -102,7 +138,7 @@
     }
   });`
 
-**Update a Meal**
+**Update a Menu**
 ----
   Updates one of three meals by restaurant id 
 
@@ -148,9 +184,9 @@
     }
   });`
 
-**Remove a Meal**
+**Remove a Menu**
 ----
-  Deletes one of three meals by restaurant id 
+  Deletes one of three menus by restaurant id and type of menu
 
 * **URL**
 
@@ -176,7 +212,7 @@
 * **Error Response:**
 
   * **Code:** 304 NOT MODIFIED <br />
-    **Content:** `{ error : "Not Updated" }`
+    **Content:** `{ error : "Not Deleted" }`
 
   OR
 
