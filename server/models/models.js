@@ -9,7 +9,6 @@ module.exports = {
   select: (meal, id) => {
     return new Promise(function(resolve, reject) {
       const query = `SELECT * FROM ${meal} WHERE ${SqlString.escape(id)};`
-      console.log(query);
       db.query(query, function(error, data){
         if(error) {
           reject(error);
@@ -21,33 +20,54 @@ module.exports = {
 
   //inserts one meal
   insert: (meal, id, data) => {
-    console.log('data', typeof data.name, typeof data.description, typeof data.price);
-
     return new Promise(function(resolve, reject){
       const query = 
       `INSERT INTO ${meal} (id, name, description, price, restaurant_id) VALUES (${data.id}, '${data.name}', '${data.description}', ${data.price}, ${data.restaurant_id})`;
-  
-      console.log(query);
-      db.query(query, function(error){
+        db.query(query, function(error){
         if (error){
           reject(error);
         }
 
-        var successNotification ='your message has been posted';
+        var successNotification ='Meal has been added!';
         resolve(successNotification);
       });
     });
   },
 
   //updates one meal 
-  update: () => {
-    const query = 
-    `INSERT INTO ${meal} (id, name, description, price, restaurant_id) VALUES (${data.id}, '${data.name}', '${data.description}', ${data.price}, ${data.restaurant_id}) WHERE restaurant_id = ${SqlString.escape(id)};`;
+  //NOTE: currently this query is not persisting in the db, needs attention
+  update: (meal, id, data) => {
+    return new Promise(function(resolve, reject){
 
-    console.log(query);
+      const query = 
+      `UPDATE ${meal} SET id = ${data.id}, name='${data.name}', description='${data.description}', price=${data.price}, restaurant_id=${data.restaurant_id} WHERE restaurant_id=${SqlString.escape(id)};`
+
+        db.query(query, function(error){
+        if (error){
+          reject(error);
+        }
+
+        var successNotification ='Meal has been updated!';
+        resolve(successNotification);
+      });
+    });
 
   },
 
   //deletes one meal 
-  delete: () => {}
+  delete: (meal, id) => {
+    return new Promise(function(resolve, reject){
+
+      const query = `DELETE FROM ${meal} WHERE restaurant_id=${SqlString.escape(id)};`
+
+        db.query(query, function(error){
+        if (error){
+          reject(error);
+        } 
+        var successNotification ='Meal has been deleted!';
+        resolve(successNotification);
+      });
+    });
+  }
 }
+

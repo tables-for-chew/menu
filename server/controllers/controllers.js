@@ -21,25 +21,42 @@ module.exports = {
     let meal = req.query.q === undefined ? 'lunch' : req.query.q;
     let id = Number(req.params.restaurantId); 
 
-    console.log('meal', meal, typeof meal); // => lunch, dinner or dessert
-    console.log('id', id, typeof id); // => restaurant id
-
     models.insert(meal, id, req.body)
     .then(() => {
-      res.status(201).send('Youve hit the POST');
+      res.status(201).send('created!');
     })
     .catch((error) => {
       console.log(error);
-      res.status(304);
+      res.status(304).send(error);
     });
   },
 
   put: (req, res) => {
-    res.status(200).send("you have hit the PUT method within the controller!");
+    let meal = req.query.q === undefined ? 'lunch' : req.query.q;
+    let id = Number(req.params.restaurantId); 
+
+    models.update(meal, id, req.body)
+    .then((data) => {
+      res.status(201).send(data);
+    })
+    .catch((error) => {
+      console.log(error);
+      res.status(304).send(error);
+    });
   },
 
   delete: (req, res) => {
-    res.status(200).send("you have hit the DELETE method within the controller!");
+    let meal = req.query.q === undefined ? 'lunch' : req.query.q;
+    let id = Number(req.params.restaurantId); 
+
+    models.delete(meal, id)
+    .then((data) => {
+      res.status(201).send(data);
+    })
+    .catch((error) => {
+      console.log(error);
+      res.status(304).send(error);
+    });  
   }
 
 }
