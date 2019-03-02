@@ -1,6 +1,7 @@
 **Get Menu**
 ----
   Returns a menu for given restaurant id and meal. The meal can be one of three: lunch, dinner, or dessert. 
+  It will be an array of objects, each object is a food item which includes that restaurant_id.
 
 * **URL**
 
@@ -114,7 +115,10 @@
         "description": "creamy deliciousness",
         "price": 15
         "restaurant_id": 67
-    }
+    },
+
+    ...
+
     ]`
 
  
@@ -163,16 +167,6 @@
 * **Success Response:**
 
   * **Code:** 200 
-      **Content:** `
-
-    { 
-      "id": 9, 
-      "name": "butter", 
-      "description": "blakfjgldkshg;jdshgierhjg;khjf", 
-      "price": 15, 
-      "restaurant_id": 4
-      } 
-    `
  
 * **Error Response:**
 

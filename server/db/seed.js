@@ -2,18 +2,6 @@ const mysql = require('mysql');
 const connection = require("./index.js");
 const data = require('./dummy_data.js');
 
-/*
-require: faker, fs.writeFile 
-
-//create data shape 
-//fill with faker values
-
-//for every 100000 records
-//stringify each record
-//
-
-*/
-
 function seeding(meal, whichMeal) {
   for (let i = 0; i < 100; i++) {
     let name = whichMeal.name[i].trim();
