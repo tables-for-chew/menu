@@ -62,7 +62,6 @@ const writeFiles = async () => {
       writeStream.on('finish', function () {
         chunkCount--;
         resolve();
-        console.log(`Write completed: ${chunkCount} chunks generated and written to ${filePath}`);
       });
       
       writeStream.on('error', function (err) {
@@ -82,5 +81,8 @@ const writeFiles = async () => {
   }
 }
 
-writeFiles();
-console.log("Program Ended");
+(async () => {
+  console.time("Program Ended")
+  await writeFiles();
+  console.timeEnd("Program Ended");
+})()
