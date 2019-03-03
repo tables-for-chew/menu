@@ -1,6 +1,5 @@
 /node_modules
 /client/dist/bundle.js
 /server/db/config.js
-/server/db/menu_data/*
-/server/db/menu_data/*
-
+/server/db/utils/generator/menu_data
+/server/db/utils/generator/dummy_data.js

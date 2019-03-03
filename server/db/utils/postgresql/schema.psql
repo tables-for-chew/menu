@@ -1,0 +1,35 @@
+\c menus
+
+CREATE TABLE dessert(
+ id INT PRIMARY KEY,
+ name text,
+ description text,
+ price INT,
+ restaurant_id INT NULL
+);
+
+COPY dessert(id,name,description,restaurant_id) 
+FROM '/Users/acaciapappas/Desktop/TableForChew/menu/server/db/utils/generator/menu_data/dessert.csv' DELIMITER ',' CSV HEADER;
+
+CREATE TABLE dinner(
+ id INT PRIMARY KEY,
+ name text,
+ description text,
+ price INT,
+ restaurant_id INT
+);
+
+COPY dinner(id,name,description,restaurant_id) 
+FROM '/Users/acaciapappas/Desktop/TableForChew/menu/server/db/utils/generator/menu_data/dinner.csv' DELIMITER ',' CSV HEADER;
+
+
+CREATE TABLE lunch(
+ id INT PRIMARY KEY,
+ name text,
+ description text,
+ price INT,
+ restaurant_id INT
+);
+
+COPY lunch(id,name,description,restaurant_id) 
+FROM '/Users/acaciapappas/Desktop/TableForChew/menu/server/db/utils/generator/menu_data/lunch.csv' DELIMITER ',' CSV HEADER;

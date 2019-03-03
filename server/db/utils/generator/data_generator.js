@@ -4,23 +4,31 @@ console.log("Generating menus now...");
 
 /*
 Generate 10,000,000 primary records, 3 menus for each, with 50-100 food items for each menu => 1,500,000,000
-500,000,000 food items per menu in chunks of 
+500,000,000 food items per menu in chunks of 10,000.
+
+The file for this proved to be HUGE so for dinner and desserts, I generated 15-20 items per menu => 600,000,000 secondary records
+200,000,000 food items per menu in chunks of 10,000.
 */
 
-//set the menu from one of three: lunch, dinner, dessert
-const meal = 'lunch';
+//set the menu from one of three: lunch, dinner, dessert. Multiple helpers depend on this const. 
+const meal = 'dinner';
+// const filePath = `./menu_data/${meal}.csv`;
 const filePath = `./menu_data/${meal}.csv`;
 
 //Total number of foodItems to generate, should be 50 items per menu => set to 10,000 items
 const itemsPerChunk = 10000;
-// const itemsPerChunk = 10;
+// const itemsPerChunk = 10; // => for test file
 
 //sets loop for number of chunks to gennerate => set to 1000
-var chunkCount = 50000;
-// var chunkCount = 10;
+var chunkCount = 20000;
+// var chunkCount = 10; // => for test file
+var chunkDecrementer = 20000; 
 
+//10,000,000 primary records by restaurant id
 //generate restaurant_ids within this range
-const totalRecords = 10000000; //10,000,000 primary records
+// querying for records under one million should return more results than over one million. 
+const subTotalRecords = 1000000
+const totalRecords = 10000000; 
 
 //sets unique id for each food item
 var itemIdCount = 1;
@@ -40,7 +48,7 @@ const foodItem = (id, restaurant_id) => {
 const chunker = () => {
   var chunk = '';
   for (let i = 0; i < itemsPerChunk; i++) {
-    const randomRestaurantId = randomNumber(totalRecords)
+    var randomRestaurantId = randomNumber(totalRecords);
     var newItem = foodItem(itemIdCount, randomRestaurantId);
     chunk = chunk + newItem;
     itemIdCount++;
@@ -79,7 +87,7 @@ const writeFiles = async () => {
       writeStream.end();
       writeStream.on('finish', function () {
         chunkCount--;
-        console.log(`${chunkCount} chunks written`)
+        console.log(`${chunkCount} chunks written to ${filePath}`)
         resolve();
       });
       writeStream.on('error', function (err) {
@@ -90,10 +98,9 @@ const writeFiles = async () => {
     return writePromise; 
   }
   
-  var count = chunkCount; 
   for(let i = 0; i < chunkCount; i--) {
-    if(count > 0){
-      count--;
+    if(chunkDecrementer > 0){
+      chunkDecrementer--;
       await writeFn()
     }
   }
