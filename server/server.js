@@ -12,6 +12,7 @@ const server = express();
 server.use(cors());
 server.use(compression());
 server.use(morgan('dev'));
+
 server.use(bodyParser.urlencoded({
   extended: true
 }));

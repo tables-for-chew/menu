@@ -11,7 +11,7 @@ The file for this proved to be HUGE so for dinner and desserts, I generated 15-2
 */
 
 //set the menu from one of three: lunch, dinner, dessert. Multiple helpers depend on this const. 
-const meal = 'dinner';
+const meal = 'lunch';
 // const filePath = `./menu_data/${meal}.csv`;
 const filePath = `./menu_data/${meal}.csv`;
 

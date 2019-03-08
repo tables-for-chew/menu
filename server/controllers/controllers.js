@@ -3,16 +3,14 @@ const models = require('../models/models.js');
 module.exports = {
 
   get: (req, res) => {
-
     let meal = req.query.q === undefined ? 'lunch' : req.query.q;
-    let id = req.params.restaurantId; 
-
+    let id = Number(req.params.restaurantId); 
     models.select(meal, id)
     .then((data) => {
-      res.status(200).send(data);
+      res.status(200).send(data.rows);
     })
-    .catch((error) => {
-      console.log(error);
+    .catch((e) => {
+      console.log(e.stack);
       res.status(404)
     });
   },
@@ -25,9 +23,9 @@ module.exports = {
     .then(() => {
       res.status(201).send('created!');
     })
-    .catch((error) => {
-      console.log(error);
-      res.status(304).send(error);
+    .catch((e) => {
+      console.log(e);
+      res.status(304).send(e.stack);
     });
   },
 
@@ -35,13 +33,13 @@ module.exports = {
     let meal = req.query.q === undefined ? 'lunch' : req.query.q;
     let id = Number(req.params.restaurantId); 
 
-    models.update(meal, id, req.body)
+    models.updateOne(meal, id, req.body)
     .then((data) => {
-      res.status(201).send(data);
+      res.status(201).send('updated ' + data.rowCount + ' row!');
     })
     .catch((error) => {
       console.log(error);
-      res.status(304).send(error);
+      res.status(204).send(error);
     });
   },
 
@@ -51,11 +49,11 @@ module.exports = {
 
     models.delete(meal, id)
     .then((data) => {
-      res.status(201).send(data);
+      res.status(201).send('menu deleted ' + data.rowCount + ' items removed!' );
     })
     .catch((error) => {
       console.log(error);
-      res.status(304).send(error);
+      res.status(204).send(error);
     });  
   }
 
