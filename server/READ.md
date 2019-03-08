@@ -191,7 +191,7 @@
 
 **Remove a Menu**
 ----
-  Deletes one of three menus by restaurant id and type of menu
+  Deletes the menu for a the given restaurant id
 
 * **URL**
 
