@@ -13,9 +13,7 @@ module.exports = {
 
   //inserts one item
   insert: async (meal, id, data) => {
-    console.log(meal, id, data);
     var query = `INSERT INTO ${meal} (name, description, price, restaurant_id) VALUES ('${data.name}', '${data.description}', ${data.price}, ${id});`;
-    console.log(query);
     return await pool.query(query);
   },
 
