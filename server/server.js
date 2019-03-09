@@ -1,3 +1,4 @@
+require('newrelic');
 const connection = require("./db");
 const express = require('express');
 const cors = require('cors');
@@ -11,10 +12,11 @@ const server = express();
 
 server.use(cors());
 server.use(compression());
-server.use(morgan('dev'));
+
 server.use(bodyParser.urlencoded({
   extended: true
 }));
+
 server.use(bodyParser.json());
 
 server.use('/api', router);

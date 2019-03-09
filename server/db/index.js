@@ -1,6 +1,6 @@
-const mysql = require('mysql');
 const config = require('./config.js');
+const { Pool } = require('pg');
 
-var connection = mysql.createConnection(config);
+const pool = new Pool(config);
 
-module.exports = connection;
+module.exports = pool;

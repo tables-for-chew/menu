@@ -1,6 +1,6 @@
 const mysql = require('mysql');
-const connection = require("./index.js");
-const data = require('./dummy_data.js');
+const connection = require("../../index.js");
+const data = require('../generator/dummy_data.js');
 
 function seeding(meal, whichMeal) {
   for (let i = 0; i < 100; i++) {
