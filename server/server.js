@@ -16,6 +16,7 @@ server.use(compression());
 server.use(bodyParser.urlencoded({
   extended: true
 }));
+
 server.use(bodyParser.json());
 
 server.use('/api', router);

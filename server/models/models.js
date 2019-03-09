@@ -3,8 +3,6 @@ const pool = require('../db/index.js');
 
 pool.connect();
 
-var newId =  200000001;
-
 module.exports = {
 
   //reads a full menu (many items by restaurant_id);
@@ -15,9 +13,9 @@ module.exports = {
 
   //inserts one item
   insert: async (meal, id, data) => {
-    newId += 1; 
-    console.log('inserted item at id: ' + newId)
-    var query = `INSERT INTO ${meal} (id, name, description, price, restaurant_id) VALUES (${newId}, '${data.name}', '${data.description}', ${data.price}, ${id});`;
+    console.log(meal, id, data);
+    var query = `INSERT INTO ${meal} (name, description, price, restaurant_id) VALUES ('${data.name}', '${data.description}', ${data.price}, ${id});`;
+    console.log(query);
     return await pool.query(query);
   },
 

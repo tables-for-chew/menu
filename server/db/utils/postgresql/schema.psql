@@ -1,7 +1,7 @@
 \c menus
 
 CREATE TABLE dessert(
- id INT PRIMARY KEY,
+ id SERIAL PRIMARY KEY,
  name text,
  description text,
  price INT,
@@ -11,8 +11,12 @@ CREATE TABLE dessert(
 COPY dessert(id,name,description,restaurant_id) 
 FROM '/Users/acaciapappas/Desktop/TableForChew/menu/server/db/utils/generator/menu_data/dessert.csv' DELIMITER ',' CSV HEADER;
 
+SELECT setval('dessert_id_seq', (SELECT MAX(id) FROM dessert)+1);
+
+CREATE INDEX restuarant_id ON dessert;
+
 CREATE TABLE dinner(
- id INT PRIMARY KEY,
+ id SERIAL PRIMARY KEY,
  name text,
  description text,
  price INT,
@@ -22,9 +26,12 @@ CREATE TABLE dinner(
 COPY dinner(id,name,description,restaurant_id) 
 FROM '/Users/acaciapappas/Desktop/TableForChew/menu/server/db/utils/generator/menu_data/dinner.csv' DELIMITER ',' CSV HEADER;
 
+SELECT setval('dinner_id_seq', (SELECT MAX(id) FROM dinner)+1);
+
+CREATE INDEX restuarant_id ON dinner;
 
 CREATE TABLE lunch(
- id INT PRIMARY KEY,
+ id SERIAL PRIMARY KEY,
  name text,
  description text,
  price INT,
@@ -33,3 +40,7 @@ CREATE TABLE lunch(
 
 COPY lunch(id,name,description,restaurant_id) 
 FROM '/Users/acaciapappas/Desktop/TableForChew/menu/server/db/utils/generator/menu_data/lunch.csv' DELIMITER ',' CSV HEADER;
+
+SELECT setval('lunch', (SELECT MAX(id) FROM lunch)+1);
+
+CREATE INDEX restuarant_id ON lunch;
