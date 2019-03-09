@@ -69,9 +69,9 @@
     }
   });`
 
-**Add a Menu**
+**Add a Menu Item**
 ----
-  Updates a menu with a given restaurant id and type of meal
+  Adds an item to a menu with a given restaurant id and type of meal
 
 * **URL**
 
@@ -94,32 +94,14 @@
 
   * **Code:** 201
       **Content:** `
-    [
     {
-        "id": 1,
+        "id": 1, //will be reassigned within the database
         "name": "cherry pie",
         "description": "yum yum yum made from fresh cherries for your local orchard",
         "price": 15
         "restaurant_id": 67
-    },
-    {
-        "id": 2,
-        "name": "peach cobbler",
-        "description": "Made form local peaches",
-        "price": 15,
-        "restaurant_id": 67
-    },
-    {
-        "id": 3,
-        "name": "chocolate mousse",
-        "description": "creamy deliciousness",
-        "price": 15
-        "restaurant_id": 67
-    },
-
-    ...
-
-    ]`
+    }
+    `
 
  
 * **Error Response:**
@@ -145,7 +127,7 @@
 
 **Update a Menu**
 ----
-  Updates one of three meals by restaurant id 
+  Updates one menu item by resturant id, item id, and meal 
 
 * **URL**
 
@@ -167,6 +149,16 @@
 * **Success Response:**
 
   * **Code:** 200 
+
+    **Content:** `
+    {
+        "id": 1,
+        "name": "cherry pie",
+        "description": "yum yum yum made from fresh cherries for your local orchard",
+        "price": 15
+        "restaurant_id": 67
+    }
+    `
  
 * **Error Response:**
 
