@@ -10,6 +10,7 @@ const bodyParser = require('body-parser');
 
 const server = express();
 
+server.use(morgan('dev'));
 server.use(cors());
 server.use(compression());
 
