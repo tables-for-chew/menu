@@ -1,12 +1,13 @@
 var SqlString = require('sqlstring');
 const pool = require('../db/index.js');
 
-pool.connect();
+// pool.connect();
 
 module.exports = {
 
   //reads a full menu (many items by restaurant_id);
   select: async (meal, id) => {
+    console.log(meal);
     var query = `SELECT * FROM ${meal} WHERE restaurant_id = ${SqlString.escape(id)};`;
     return await pool.query(query);
   },
