@@ -1,8 +1,6 @@
 var SqlString = require('sqlstring');
 const pool = require('../db/index.js');
 
-// pool.connect();
-
 module.exports = {
 
   //reads a full menu (many items by restaurant_id);
