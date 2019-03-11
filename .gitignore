@@ -3,6 +3,6 @@
 /server/db/config.js
 /server/db/utils/generator/menu_data
 /server/db/utils/generator/dummy_data.js
-/newrelic.js
+# /newrelic.js
 /config.js
-/hello.yml
+# /hello.yml

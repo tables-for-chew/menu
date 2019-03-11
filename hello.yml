@@ -1,0 +1,20 @@
+config:
+  target: 'http://localhost:3031'
+  processor: "./artillery_functions.js"
+  phases:
+    - duration: 60
+      arrivalRate: 1000
+  defaults:
+    headers:
+      x-my-service-auth: '987401838271002188298567'
+scenarios:
+  - flow:
+    # - get:
+    #     url: "/api/{{$randomNumber(1,10000000)}}/menu?q=dinner"
+    - post:
+        url: "/api/{{$randomNumber(1,10000000)}}/menu?q=dinner"
+        json: 
+          name: "artillery test"
+          description: "A crisp salad featuring fresh raisin and calamari "
+          price: 100
+          restaurant_id: 3767
