@@ -11,7 +11,7 @@ The file for this proved to be HUGE so for dinner and desserts, I generated 15-2
 */
 
 //set the menu from one of three: lunch, dinner, dessert. Multiple helpers depend on this const. 
-const meal = 'lunch';
+const meal = 'dessert';
 // const filePath = `./menu_data/${meal}.csv`;
 const filePath = `./menu_data/${meal}.csv`;
 
@@ -20,9 +20,9 @@ const itemsPerChunk = 10000;
 // const itemsPerChunk = 10; // => for test file
 
 //sets loop for number of chunks to gennerate => set to 1000
-var chunkCount = 20000;
+var chunkCount = 1000;
 // var chunkCount = 10; // => for test file
-var chunkDecrementer = 20000; 
+var chunkDecrementer = 1000; 
 
 //10,000,000 primary records by restaurant id
 //generate restaurant_ids within this range
