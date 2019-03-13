@@ -4,7 +4,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const compression = require('compression');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const router = require('./routes.js');
 const bodyParser = require('body-parser');
 
@@ -12,7 +12,7 @@ const server = express();
 
 server.use(cors());
 server.use(compression());
-server.use(morgan('dev'));
+// server.use(morgan('dev'));
 
 server.use(bodyParser.urlencoded({
   extended: true
