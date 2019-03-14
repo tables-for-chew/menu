@@ -1,6 +1,11 @@
 const models = require('../models/models.js');
+const path = require('path');
 
 module.exports = {
+
+  bundle: (req, res) => {
+    res.sendFile(path.join(__dirname, '../../client/dist/bundle.js'))
+  },
 
   get: (req, res) => {
     let meal = req.query.q === undefined ? 'lunch' : req.query.q;
