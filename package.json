@@ -11,6 +11,7 @@
     "verbose": true
   },
   "scripts": {
+    "postinstall": "webpack -p",
     "react-dev": "webpack -p --watch",
     "test": "jest",
     "start": "node server/index.js",
